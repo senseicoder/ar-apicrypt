@@ -1,14 +1,14 @@
 # But 
 
-Décrire
+Déployer les binaires apicrypt
 
 # Usage
 
 roles:
-  - { role: ar-modele, mode: install, tags: ['docker', 'docker-cleanup'] }
+  - { role: ar-apicrypt, mode: install, tags: ['docker', 'docker-cleanup'] }
 
 # variables à surcharger
 
-* exemple : lieu de stockage du script de nettoyage
+* apicrypt_path_bin_dest : chemin de stockage des binaires
 
 # Todo
