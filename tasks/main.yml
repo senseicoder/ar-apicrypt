@@ -1,0 +1,21 @@
+---
+
+- set_fact:
+    path_bin_dest: /usr/local/epiconcept/apicrypt
+
+- name: création dossier destination
+  file: 
+    path="{{ path_bin_dest }}"
+    state=directory
+
+- name: copie des fichiers binaires
+  copy: 
+    src="{{ item }}"
+    dest="{{ path_bin_dest }}/"
+    mode=0755
+  become: true
+  with_items:
+    - apicrypt
+    - apicryptpj
+    - apiuncrypt
+    - apiuncryptpj
