@@ -1,6 +1,7 @@
 ---
 
 - name: création dossier destination
+  become: true
   file: 
     path="{{ apicrypt_path_bin_dest }}"
     state=directory
